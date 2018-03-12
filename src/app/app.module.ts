@@ -16,6 +16,15 @@ import { SearchComponent } from './search/search.component';
 
 import { SPOTIFY_PROVIDERS } from './spotify.service';
 
+const routes: Routes = [
+  { path: '', redirectTo: 'search', pathMatch: 'full' },
+  { path: 'search', component: SearchComponent },
+  { path: 'artists/:id', component: ArtistComponent },
+  { path: 'tracks/:id', component: TrackComponent },
+  { path: 'albums/:id', component: AlbumComponent },
+];
+
+
 @NgModule({
   declarations: [
     AppComponent,
